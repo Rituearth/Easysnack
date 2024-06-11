@@ -1,0 +1,168 @@
+/* Color Palette */
+:root {
+    --primary-color: #ff8000;  /* Orange */
+    --secondary-color: #000000;  /* Black */
+    --text-color: #ff5e00;  /* Dark Orange */
+    --button-color: #ff5e00;  /* Dark Orange */
+    --button-hover-color: #fe5602;  /* Darker Orange */
+    --buy-button-color: #ff5e00;  /* Dark Orange */
+    --buy-button-hover-color: #b2390d;  /* Darker Red */
+    --menu-text-color: #000000;  /* Black */
+    --restaurant-text-color: #000000;  /* Black */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 40px;
+    margin-right: 20px;
+}
+
+.title {
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+.restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.restaurant {
+    background: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+    color: var(--restaurant-text-color);  /* Set text color to black */
+}
+
+.restaurant img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.restaurant:hover {
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+.menu {
+    text-align: left;
+    padding: 20px;
+}
+
+.menu-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    color: var(--menu-text-color);  /* Set text color to black */
+}
+
+.menu-item {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px; /* Adjust font size to fit "+ADD" text */
+    transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.add-button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.1);
+}
+
+.back-button {
+    background: var(--button-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    
+}
+
+.back-button:hover {
+    background: var(--button-hover-color);
+    transform: scale(1.2);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.buy-button {
+    background-color: var(--buy-button-color);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    width: 25%;
+    margin: 0 auto;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Add transform to transition */
+}
+
+.buy-button:hover {
+    background-color: var(--buy-button-hover-color);
+    transform: scale(1.1); /* Add this line to increase size */
+}
+
