@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
             image: "2g.jpg",
             menuItems: [
                 { name: "Mushroom Riosotte", price: 265 },
-                { name: "Chicken Riosotte", price: 18.0 },
+                { name: "Chicken Riosotte", price: 180 },
                 { name: "Creamy Mushroom", price: 150 },
                 { name: "Spinach & Corn", price: 150 },
                 { name: "Mango cake ", price: 170 }
@@ -139,4 +139,40 @@ document.addEventListener("DOMContentLoaded", () => {
         menu.classList.remove("hidden");
         document.querySelector(".container").classList.add("hidden");
     }
+
+    // Geolocation and Google Maps integration
+    function getLocationAndRedirect() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+    }
+
+    function showPosition(position) {
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+        var googleMapsLink = "https://www.google.com/maps/search/Restaurents/@"
+                            + latitude + "," + longitude + ",15z";
+        window.open(googleMapsLink, "_blank");
+    }
+
+    function showError(error) {
+        switch(error.code) {
+            case error.PERMISSION_DENIED:
+                alert("User denied the request for Geolocation.");
+                break;
+            case error.POSITION_UNAVAILABLE:
+                alert("Location information is unavailable.");
+                break;
+            case error.TIMEOUT:
+                alert("The request to get user location timed out.");
+                break;
+            case error.UNKNOWN_ERROR:
+                alert("An unknown error occurred.");
+                break;
+        }
+    }
+
+    document.querySelector('.map-button').addEventListener('click', getLocationAndRedirect);
 });
