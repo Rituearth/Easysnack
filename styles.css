@@ -166,3 +166,30 @@ h1 {
     transform: scale(1.1); /* Add this line to increase size */
 }
 
+
+.map-button {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+     /* Google blue */
+    border-radius: 10px;
+    text-align: center;
+    line-height: 100px; /* Vertically center the icon */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: absolute;
+    top: 10px; /* Adjust the distance from the top */
+    right: 10px; /* Adjust the distance from the right */
+}
+
+.map-button:hover {
+    
+    transform: scale(1.2);
+
+    
+}
+
+.icon {
+    width: 60%;
+    height: 60%;
+    vertical-align: middle;
+}
